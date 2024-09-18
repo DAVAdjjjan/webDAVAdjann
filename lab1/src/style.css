@@ -1,13 +1,24 @@
-/* Стилі для сітки */
-.grid-container {
+/* Для сітки */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid-container {
     display: grid;
     grid-template-areas:
       "item1 item1 item1 item1 item1"
-      "item2 item3 item3 item5 item5"
+      "item2 item3 item3 item3 item3"
       "item2 item4 item4 item5 item5"
       "item6 item6 item6 item6 item6";
     grid-gap: 10px;
     padding: 10px;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
   }
   
   .grid-container > div {
