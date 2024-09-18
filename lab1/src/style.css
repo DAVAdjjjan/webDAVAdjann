@@ -1,62 +1,91 @@
-.grid-container {
+/* Забезпечує повну висоту сторінки */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid-container {
     display: grid;
+    width: 90vw;  /* Задаємо ширину 90% від ширини вікна */
+    height: 90vh; /* Задаємо висоту 90% від висоти вікна */
+    grid-template-columns: 1fr 3fr 1fr 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
     grid-template-areas:
       "x item1 item1 item1 item1 y"
       "item2 item3 item3 item3 item5 item5"
       "item2 item4 item4 item4 item5 item5"
       "item2 item6 item6 item6 item6 item6";
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
     gap: 10px;
-    padding: 10px;
-  }
-  
-  .item1, .item2, .item3, .item4, .item5, .item6, .x, .y {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    border: 1px solid black;
     padding: 10px;
   }
   
   .item1 {
     grid-area: item1;
     background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .item2 {
     grid-area: item2;
     background-color: peachpuff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .item3 {
     grid-area: item3;
     background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .item4 {
     grid-area: item4;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
   }
   
   .item5 {
     grid-area: item5;
     background-color: peachpuff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .item6 {
     grid-area: item6;
     background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .x, .y {
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px;
   }
   
   .x {
     grid-area: x;
-    background-color: white;
   }
   
   .y {
     grid-area: y;
-    background-color: white;
   }
   
