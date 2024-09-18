@@ -14,13 +14,13 @@ body, html {
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr 1fr;
     position: relative;
-    background-color: #ffcc80; 
-    overflow: hidden; /* Уникає виходу елементів за межі */
+    background-color: #ffcc80;
+    overflow: hidden;
 }
 
 .item1 {
-    background-color: #f39c12; 
-    color: #fff; 
+    background-color: #f39c12;
+    color: #fff;
     text-align: center;
     padding-right: 20px;
     display: flex;
@@ -32,16 +32,15 @@ body, html {
     grid-row: 1;
 }
 
-
 .item2 {
-    background-color: #fff; 
-    color: #f39c12; 
+    background-color: #fff;
+    color: #f39c12;
     text-align: left;
     padding-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-size: 1.2em; 
+    font-size: 1.2em;
     line-height: 1.6em;
     width: 50%;
     height: auto;
@@ -72,8 +71,8 @@ body, html {
 }
 
 .item3 {
-    background-color: #f7c6c7; 
-    color: #f39c12; 
+    background-color: #f7c6c7;
+    color: #f39c12;
     text-align: center;
     padding: 10px;
     font-size: 1.5em;
@@ -88,8 +87,8 @@ body, html {
 }
 
 .item4 {
-    background-color: #f39c12; 
-    color: #fff; 
+    background-color: #f39c12;
+    color: #fff;
     text-align: center;
     display: flex;
     align-items: center;
@@ -104,14 +103,14 @@ body, html {
 }
 
 .item4 img {
-    max-height: 450px; /* Зменшує висоту зображення до 450px */
+    max-height: 450px;
     width: auto;
     object-fit: contain;
 }
 
 .item5 {
     background-color: #fff;
-    color: #f39c12; 
+    color: #f39c12;
     text-align: right;
     padding-right: 20px;
     display: flex;
@@ -130,8 +129,8 @@ body, html {
 }
 
 .item6 {
-    background-color: #f7c6c7; 
-    color: #fff; 
+    background-color: #f7c6c7;
+    color: #fff;
     text-align: left;
     padding-left: 20px;
     display: flex;
@@ -145,14 +144,14 @@ body, html {
 }
 
 .overlay-x {
-    position: fixed; 
+    position: fixed;
     top: 10px;
     left: 10px;
-    background-color: #fff; 
-    border: 2px solid #f39c12; 
+    background-color: #fff;
+    border: 2px solid #f39c12;
     padding: 5px 20px;
     font-size: 1.5em;
-    color: #f39c12; 
+    color: #f39c12;
     width: 300px;
     height: 100px;
     box-sizing: border-box;
@@ -160,18 +159,96 @@ body, html {
 }
 
 .overlay-y {
-    position: fixed; 
+    position: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: #fff; 
+    background-color: #fff;
     border: 2px solid #f39c12;
     padding: 5px 20px;
     font-size: 1.5em;
-    color: #f39c12; 
+    color: #f39c12;
     width: 300px;
     height: 100px;
     box-sizing: border-box;
     z-index: 1;
 }
 
+/* Медіа-запити для мобільних пристроїв */
 
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Перехід до одного стовпця */
+        grid-template-rows: auto auto auto auto;
+    }
+
+    .item1 {
+        grid-column: 1;
+        grid-row: 1;
+        height: 120px; /* Менша висота для мобільних пристроїв */
+    }
+
+    .item2 {
+        grid-column: 1;
+        grid-row: 2;
+        padding: 10px; /* Менше відступи */
+    }
+
+    .item3 {
+        grid-column: 1;
+        grid-row: 3;
+        height: 40px; /* Менша висота для мобільних пристроїв */
+    }
+
+    .item4 {
+        grid-column: 1;
+        grid-row: 4;
+        padding: 10px;
+    }
+
+    .item4 img {
+        max-height: 300px; /* Зменшуємо висоту для мобільних пристроїв */
+        width: 100%;       /* Адаптуємо ширину зображення */
+        height: auto;      /* Встановлюємо автоматичну висоту */
+    }
+
+    .item5 {
+        grid-column: 1;
+        grid-row: 5;
+        padding: 10px;
+        font-size: 1.5em; /* Менший розмір шрифту */
+    }
+
+    .item6 {
+        grid-column: 1;
+        grid-row: 6;
+        height: 120px; /* Менша висота для мобільних пристроїв */
+    }
+
+    .overlay-x, .overlay-y {
+        width: 100%;
+        height: auto;
+        font-size: 1em; /* Менший розмір шрифту для мобільних пристроїв */
+        text-align: center; /* Центрування тексту */
+        bottom: auto;
+        top: auto;
+        right: 0;
+        left: 0;
+        border: 1px solid #f39c12; /* Менший розмір бордеру */
+    }
+}
+
+@media (max-width: 480px) {
+    .item1 {
+        font-size: 1.5em; /* Ще менший розмір шрифту */
+    }
+
+    .item2, .item5, .item6 {
+        font-size: 1em; /* Ще менший розмір шрифту */
+    }
+
+    .item4 img {
+        max-height: 200px; /* Ще менша висота для дуже маленьких екранів */
+        width: 100%;       /* Ширина на весь контейнер */
+        height: auto;      /* Автоматична висота для збереження пропорцій */
+    }
+}
