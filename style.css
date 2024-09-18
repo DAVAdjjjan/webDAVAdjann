@@ -1,27 +1,25 @@
-/* Загальні налаштування */
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; /* Забезпечує, що висота сторінки займає весь екран */
+    height: 100%; 
     font-family: 'VT323', monospace;
     background-color: #ffcc80;
     color: #333;
     text-align: center;
   }
   
-  /* Основний контейнер */
+ 
   body {
     display: flex;
     flex-direction: column;
   }
   
-  /* Основний вміст повинен заповнювати простір перед футером */
+  
   main {
     flex: 1;
     padding: 20px;
   }
   
-  /* Заголовки */
   h1, h2 {
     color: #d35400;
     text-transform: uppercase;
@@ -35,7 +33,6 @@ html, body {
     font-size: 24px;
   }
   
-  /* Список робіт */
   .project-list ul {
     list-style-type: none;
     padding: 0;
