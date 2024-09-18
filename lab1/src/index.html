@@ -1,142 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grid Layout</title>
-  <style>
-    /* Стилі для глобальних елементів */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      text-align: center;
-      overflow-x: hidden;
-    }
-
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      min-height: 100dvh;
-      width: 100vw;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-template-areas:
-        "item1 item1 item1 item1 item1"
-        "item2 item3 item3 item5 item5"
-        "item2 item4 item4 item5 item5"
-        "item6 item6 item6 item6 item6";
-      grid-gap: 10px;
-      padding: 10px;
-      width: 200%;
-      height: 200%;
-      box-sizing: border-box;
-      flex: 1 1 auto;
-    }
-
-    .grid-container > div {
-      padding: 20px;
-      font-size: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 2px solid #000;
-    }
-
-    /* Стилі для кожного елемента сітки */
-    .item1 {
-      grid-area: item1;
-      background-color: lightblue;
-      position: relative;
-    }
-
-    .item2 {
-      grid-area: item2;
-      background-color: peachpuff;
-    }
-
-    .item3 {
-      grid-area: item3;
-      background-color: lightgreen;
-      height: 100%; /* Об'єкт 3 займатиме повну висоту свого місця в сітці */
-    }
-
-    .item4 {
-      grid-area: item4;
-      background-color: white;
-    }
-
-    .item5 {
-      grid-area: item5;
-      background-color: peachpuff;
-      height: 50%; /* Зменшуємо об'єкт 5 до нижньої половини */
-      align-self: flex-end; /* Вирівнюємо об'єкт 5 по нижній частині контейнера */
-      overflow: hidden; /* Приховуємо верхню частину */
-    }
-
-    .item6 {
-      grid-area: item6;
-      background-color: lightblue;
-      position: relative;
-    }
-
-    /* Стилі для елементів x та y */
-    .x, .y {
-      background-color: white;
-      border: 2px solid black;
-      padding: 5px;
-    }
-
-    .x {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-
-    .y {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-    }
-
-    /* Адаптивність для мобільних пристроїв */
-    @media (max-width: 600px) {
-      .grid-container {
-        grid-template-areas:
-          "item1"
-          "item2"
-          "item3"
-          "item4"
-          "item5"
-          "item6";
-      }
-
-      .grid-container > div {
-        font-size: 20px;
-        padding: 10px;
-      }
-
-      .x, .y {
-        position: static;
-        margin: 10px auto;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="grid-container">
-    <div class="item1">Item 1</div>
-    <div class="item2">Item 2</div>
-    <div class="item3">Item 3</div>
-    <div class="item4">Item 4</div>
-    <div class="item5">Item 5</div>
-    <div class="item6">Item 6</div>
-  </div>
+    <div class="container">
+        <div class="item x">x</div>
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item y">y</div>
+        <div class="item item6">6</div>
+    </div>
 </body>
 </html>
