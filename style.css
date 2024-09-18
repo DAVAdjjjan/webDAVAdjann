@@ -1,0 +1,78 @@
+/* Загальні налаштування */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Забезпечує, що висота сторінки займає весь екран */
+    font-family: 'VT323', monospace;
+    background-color: #ffcc80;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Основний контейнер */
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Основний вміст повинен заповнювати простір перед футером */
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Заголовки */
+  h1, h2 {
+    color: #d35400;
+    text-transform: uppercase;
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0 #ffb74d, 5px 5px 0 #e67e22;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  /* Список робіт */
+  .project-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .project-list li {
+    margin: 15px 0;
+  }
+  
+  .project-list a {
+    text-decoration: none;
+    color: #e65100;
+    font-size: 20px;
+    background-color: #fff;
+    border: 3px solid #e65100;
+    padding: 10px 20px;
+    display: inline-block;
+    box-shadow: 2px 2px 0 #ff8a65, 4px 4px 0 #e65100;
+    transition: all 0.3s;
+  }
+  
+  .project-list a:hover {
+    background-color: #e65100;
+    color: #fff;
+    box-shadow: 4px 4px 0 #e65100, 6px 6px 0 #d84315;
+  }
+  
+  /* Футер */
+  footer {
+    margin-top: 40px;
+    font-size: 12px;
+    color: #ff7043;
+    background-color: #e65100;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+  }
+  
