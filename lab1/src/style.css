@@ -11,7 +11,7 @@ html, body {
     display: grid;
     grid-template-areas:
       "item1 item1 item1 item1 item1"
-      "item2 item3 item3 item3 item3"
+      "item2 item3 item3 item5 item5"
       "item2 item4 item4 item5 item5"
       "item6 item6 item6 item6 item6";
     grid-gap: 10px;
