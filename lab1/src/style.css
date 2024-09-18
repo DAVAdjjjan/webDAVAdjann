@@ -57,6 +57,7 @@
   .item3 {
     grid-area: item3;
     background-color: lightgreen;
+    height: 100%; /* Об'єкт 3 займатиме повну висоту свого місця в сітці */
   }
   
   .item4 {
@@ -67,6 +68,9 @@
   .item5 {
     grid-area: item5;
     background-color: peachpuff;
+    height: 50%; /* Зменшуємо об'єкт 5 до нижньої половини */
+    align-self: flex-end; /* Вирівнюємо об'єкт 5 по нижній частині контейнера */
+    overflow: hidden; /* Приховуємо верхню частину */
   }
   
   .item6 {
