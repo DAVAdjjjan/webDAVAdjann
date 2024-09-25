@@ -10,7 +10,7 @@
     float: left;
 }
 
-.block1 p b{
+.block1 p b, .block6 p b {
     color: rgb(53, 36, 208);
 }
 
@@ -28,6 +28,24 @@ h2 {
     font-size: 1.2vw;
 }
 
+h3{
+    text-align: center;
+}
+
+.horizontal-list {
+    display: flex; 
+    list-style-type: none; 
+    justify-content: center;
+   
+}
+
+.horizontal-list li {
+    margin-right: 1.5vw;
+    font-size: 1.5vw; 
+    color: white; 
+}
+
+
 .block2 {
     height: 70vh;
     width: 15%;
@@ -39,6 +57,10 @@ h2 {
 .block2 p{
     font-size: 1.2vw;
     color: rgb(255, 255, 255);
+}
+
+.block2 p b{
+    color: rgb(28, 22, 135);
 }
 
 .block3 {
@@ -83,8 +105,12 @@ h2 {
     font-size: 1.2vw;
 }
 
+.block5 ol li b{
+    color: rgb(61, 214, 97);
+}
+
 .block5 ol li {
-    margin-bottom: 3em;
+    margin-bottom: 2.5em;
 }
 
 .block6 {
