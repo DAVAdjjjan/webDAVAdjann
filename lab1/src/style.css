@@ -1,78 +1,98 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
-
-
 
 .block1 {
     height: 15vh;
     width: 100%;
-    background-color: lightblue;
-
-    float: top;
+    background-color: rgb(181, 78, 178);
+    float: left;
 }
 
-.block1 p {
+.block1 p, .block6 p {
     margin-top: 2%;
     margin-right: 2%;
-
+    margin-left: auto;
     float: right;
+    width: 70%;
+    font-size: 1.5vw;
+    color: white;
+}
+
+h2 {
+    font-size: 1.2vw;
 }
 
 .block2 {
     height: 70vh;
     width: 15%;
-    background-color: lightsalmon;
-
+    background-color: rgb(195, 64, 149);
     text-align: center;
-
     float: left;
+}
+
+.block2 p{
+    font-size: 1.2vw;
+    color: rgb(255, 255, 255);
 }
 
 .block3 {
     height: 5vh;
     width: 85%;
-    background-color: lightgreen;
+    background-color: rgb(230, 178, 235);
+    display: flex;
+    align-items: center;
+     font-size: 1.2vw;
+}
 
-    float: left;
+.block3 a {
+    color: rgb(95, 143, 220);
+    text-decoration: underline;
+    padding: 0 6.5vw;
 }
 
 .block4 {
     height: 65vh;
     width: 70%;
-    background-color: rgb(141, 141, 141);
-
-    line-height: 65vh;
+    background-color: rgb(255, 255, 255);
+    line-height: 30vh;
     text-align: center;
-
     float: left;
+}
+
+.block4 img {
+    height: 100%;
+    width: 100%;
 }
 
 .block5 {
     height: 65vh;
     width: 15%;
-    background-color: lightsalmon;
-
+    background-color: rgb(195, 64, 149);
     float: right;
 }
 
 .block5 ol {
     padding-left: 20px;
+    color: rgb(28, 22, 135);
+    font-size: 1.2vw;
+}
+
+.block5 ol li {
+    margin-bottom: 3em;
 }
 
 .block6 {
     height: 15vh;
     width: 100%;
-    background-color: lightblue;
-
+    background-color: rgb(181, 78, 178);
     float: left;
 }
 
 .block6 p {
     margin-top: 2%;
     margin-left: 2%;
-
     float: inline-start;
 }
 
@@ -82,9 +102,7 @@
     background-color: white;
     margin-top: 2%;
     margin-left: 2%;
-
     text-align: center;
-
     float: inline-start;
 }
 
