@@ -76,7 +76,7 @@
     float: inline-start;
 }
 
-.x, .y {
+#x, #y {
     height: 5vh;
     width: 20%;
     background-color: white;
@@ -88,8 +88,7 @@
     float: inline-start;
 }
 
-.y {
+#y {
     margin: 2%;
-
     float: inline-end;
 }
