@@ -10,6 +10,10 @@
     float: left;
 }
 
+.block1 p b{
+    color: rgb(53, 36, 208);
+}
+
 .block1 p, .block6 p {
     margin-top: 1%;
     margin-right: 2%;
