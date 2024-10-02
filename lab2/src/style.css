@@ -8,6 +8,7 @@
     width: 100%;
     background-color: rgb(181, 78, 178);
     float: left;
+    font-size: 1.5vw;
 }
 
 .block1 p b, .block6 p b {
@@ -20,7 +21,6 @@
     margin-left: auto;
     float: right;
     width: 72%;
-    font-size: 1.5vw;
     color: white;
 }
 
@@ -69,7 +69,7 @@ h3{
     background-color: rgb(230, 178, 235);
     display: flex;
     align-items: center;
-     font-size: 1.2vw;
+    font-size: 1.2vw;
 }
 
 .block3 a {
@@ -100,7 +100,7 @@ h3{
 }
 
 .block5 ol {
-    padding-left: 20px;
+    list-style-type: none;
     color: rgb(28, 22, 135);
     font-size: 1.2vw;
 }
@@ -111,6 +111,7 @@ h3{
 
 .block5 ol li {
     margin-bottom: 2.5em;
+    
 }
 
 .block6 {
@@ -118,6 +119,7 @@ h3{
     width: 100%;
     background-color: rgb(181, 78, 178);
     float: left;
+    font-size: 1.5vw;
 }
 
 .block6 p {
