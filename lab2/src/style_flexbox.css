@@ -5,8 +5,20 @@
 
 .flexbox-layout {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.main{
+    display: flex;
+}
+
+.menu_divider{
+    display: flex;
+    flex-direction: column;
+}
+
+.center{
+    display: flex;
 }
 
 .block1, .block6 {
@@ -16,7 +28,6 @@
 }
 
 .block1 {
-    order: 1;
     font-size: 1.5vw;
 }
 
@@ -43,29 +54,28 @@ h3 {
 
 .block2 {
     height: 70vh;
-    width: 15%;
+    width: 15vw;
     background-color: rgb(195, 64, 149);
     text-align: center;
-    order: 2;
+    float: left;
 }
 
-.block2 p {
+.block2 p{
     font-size: 1.2vw;
     color: rgb(255, 255, 255);
 }
 
-.block2 p b {
+.block2 p b{
     color: rgb(28, 22, 135);
 }
 
 .block3 {
     height: 5vh;
-    width: 85%;
+    width: 100%;
     background-color: rgb(230, 178, 235);
     display: flex;
     align-items: center;
     font-size: 1.2vw;
-    order: 3;
 }
 
 .block3 a {
@@ -76,10 +86,11 @@ h3 {
 
 .block4 {
     height: 65vh;
-    width: 70%;
+    width: 85%;
     background-color: rgb(255, 255, 255);
+    line-height: 30vh;
     text-align: center;
-    order: 4;
+    float: left;
 }
 
 .block4 img {
@@ -91,7 +102,7 @@ h3 {
     height: 65vh;
     width: 15%;
     background-color: rgb(195, 64, 149);
-    order: 5;
+    float: right;
 }
 
 .block5 ol {
@@ -100,16 +111,21 @@ h3 {
     font-size: 1.2vw;
 }
 
-.block5 ol li b {
+.block5 ol li b{
     color: rgb(61, 214, 97);
 }
 
 .block5 ol li {
     margin-bottom: 2.5em;
+    
 }
 
 .block6 {
-    order: 6;
+    height: 15vh;
+    width: 100%;
+    background-color: rgb(181, 78, 178);
+    float: left;
+    font-size: 1.5vw;
 }
 
 .block6 p {
