@@ -105,7 +105,7 @@ body {
 }
 
 .f1__category__photo:hover, .nascar__category__photo:hover {
-  transform: scale(1.10);
+  transform: scale(1.05);
   border-radius: 30px;
 }
 
