@@ -60,6 +60,7 @@ body {
   background-color: white;
 }
 
+/* #region nav */
 .nav {
   grid-column: 2 / 4;
   display: flex;
@@ -85,21 +86,20 @@ body {
   -webkit-text-fill-color: transparent; 
 }
 
+.car__category{ 
+  flex-basis: 324px;
+}
+
 .schedule {
   display: flex;
   justify-content: space-around; 
-  margin-right: 20px;
-  margin-left: 20px;
-  
+  gap: 24px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .f1__category__photo, .nascar__category__photo {  
-  display: flex;
-  border-radius: 8px; 
-  transition: transform 0.3s; 
-  width: 90%; 
-  max-width: 310px;
-  margin: 10px auto;
+  width: 100%;
 }
 
 .f1__category__photo:hover, .nascar__category__photo:hover {
@@ -113,25 +113,11 @@ body {
 .category-photo__title {
   color: white;
   text-align: center;
-  margin-top: 0;
+  margin: 0;
+  font-weight: bold;
   font-style: italic;
-  letter-spacing: 1.5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* #endregion */
 
 .main__content{
   background-color: white;
