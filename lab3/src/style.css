@@ -1,0 +1,87 @@
+::-webkit-scrollbar { width: 0;}
+
+body {
+  margin: 0;
+}
+
+/* #region header */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 64px 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6c1f84204813599.66affbcd39390.jpg);
+}
+
+.header__logo {
+  height: 15vh;
+}
+
+.menu__icon {
+  filter: invert(1);
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__title {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: -1.5px;
+  margin-bottom: 40px;
+}
+
+/* #endregion */
+
+.overall {
+  display: grid;
+  grid-template-columns: 25vw 50vw 25vw;
+  grid-template-rows: 30vh 170vh;
+}
+
+.left__bar {
+  grid-row: 1 / 3;
+  display: flex;
+  background-color: red;
+}
+
+.nav {
+  grid-column: 2 / 4;
+  background-color: green;
+}
+
+.main__content{
+  background-color: orange;
+  grid-column: 2;
+}
+
+.right__bar {
+  grid-row: 2 / 3;
+  grid-column: 3;
+  background-color: pink;
+}
+
+/* #region footer */
+.footer {
+  height: 460px;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/602621204813599.66affbcd3b522.jpg);
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* #endregion */
