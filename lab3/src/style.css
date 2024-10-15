@@ -1,11 +1,14 @@
 ::-webkit-scrollbar { width: 0;}
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
 
 /* #region header */
-
 .header {
   display: flex;
   flex-direction: column;
@@ -48,29 +51,97 @@ body {
 .overall {
   display: grid;
   grid-template-columns: 25vw 50vw 25vw;
-  grid-template-rows: 30vh 170vh;
+  grid-template-rows: 50vh 150vh;
 }
 
 .left__bar {
   grid-row: 1 / 3;
   display: flex;
-  background-color: red;
+  background-color: white;
 }
 
 .nav {
   grid-column: 2 / 4;
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/d946e3204813599.66affbcb5ff14.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
+.nav__title {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-style: italic;
+  line-height: 100%;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #ffffff, #2d322f);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+}
+
+.schedule {
+  display: flex;
+  justify-content: space-around; 
+  margin-right: 20px;
+  margin-left: 20px;
+  
+}
+
+.f1__category__photo, .nascar__category__photo {  
+  display: flex;
+  border-radius: 8px; 
+  transition: transform 0.3s; 
+  width: 90%; 
+  max-width: 310px;
+  margin: 10px auto;
+}
+
+.f1__category__photo:hover, .nascar__category__photo:hover {
+  transform: scale(1.10);
+}
+
+.category__link {
+  text-decoration: none;
+}
+
+.category-photo__title {
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  font-style: italic;
+  letter-spacing: 1.5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .main__content{
-  background-color: orange;
+  background-color: white;
   grid-column: 2;
 }
 
 .right__bar {
   grid-row: 2 / 3;
   grid-column: 3;
-  background-color: pink;
+  background-color: white;
 }
 
 /* #region footer */
