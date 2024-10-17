@@ -166,7 +166,7 @@ body {
 @media (max-width: 740px) {
   .left__bar {
     overflow-y: hidden;
-    height: 1100px;
+    height: auto;
   }
 }
 /* #endregion */
