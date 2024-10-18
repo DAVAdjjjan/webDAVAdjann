@@ -19,7 +19,6 @@
     margin-top: 1%;
     margin-right: 2%;
     margin-left: auto;
-    float: right;
     width: 72%;
     color: white;
 }
@@ -32,14 +31,14 @@ h3{
     text-align: center;
 }
 
-.horizontal-list { 
+.list { 
     list-style-type: none; 
     float: right;
 }
 
-.horizontal-list li {
+.list li {
     margin-right: 1.5vw;
-    font-size: 1.5vw; 
+    font-size: 1vw; 
     color: white; 
 }
 
@@ -65,7 +64,7 @@ h3{
     height: 5vh;
     width: 85%;
     background-color: rgb(230, 178, 235);
-    display: flex;
+    float: right;
     align-items: center;
     font-size: 1.2vw;
 }
@@ -108,8 +107,7 @@ h3{
 }
 
 .block5 ol li {
-    margin-bottom: 2.5em;
-    
+    margin-bottom: 2.5em;  
 }
 
 .block6 {
@@ -123,7 +121,7 @@ h3{
 .block6 p {
     margin-top: 2%;
     margin-left: 2%;
-    float: inline-start;
+    float: left;
 }
 
 .x, .y {
