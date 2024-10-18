@@ -122,18 +122,17 @@ h3{
     float: inline-start;
 }
 
-#x, #y {
+.x, .y {
     height: 5vh;
     width: 20%;
     background-color: white;
     margin-top: 2%;
     margin-left: 2%;
-    text-align: center;
-    float: inline-start;
+    float: left;
+
 }
 
-#y {
-    margin: 2%;
-    float: inline-end;
-    line-height: 5vh;
+.y {
+    margin-right: 2%;
+    float: right;
 }
