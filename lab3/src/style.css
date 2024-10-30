@@ -272,7 +272,7 @@ body {
 
 /* #region rightbar */
 .right__bar {
-  grid-row: 2 / 3;
+  
   grid-column: 3;
   background-color: black;
 }
@@ -289,6 +289,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 
 .route__image{
@@ -320,7 +321,8 @@ body {
 
 @media (max-height: 740px) {
   .right__bar {
-    height: 600px;
+    height: auto;
+    padding-bottom: 50px;
   }
   .right__bar__title {
     margin-bottom: 50px;
