@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Inter", serif;
+}
+
+/* #region header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid;
+}
+
+.input {
+  margin-left: 10%;
+  height: 30%;
+}
+
+.anchor {
+  margin-right: 10%;
+}
+/* #endregion */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 700px;
+  background-image: url(https://i0.wp.com/mattthepainter.com/wp-content/uploads/yellow-walls.jpg?fit=1024%2C683&ssl=1);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main__top {
+  width: 75%;
+  height: auto;
+  min-height: 200px;
+  margin-bottom: 20px;
+}
+
+.main__title {
+  margin-top: 60px;
+  margin-bottom: 10px;
+  font-size: 52px;
+  font-weight: 400;
+}
+
+.text__under__title {
+  font-weight: 200;
+  line-height: 25px;
+  letter-spacing: -0.3px;
+  max-width: 500px;
+}
+
+.sections__holder {
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+  width: 75%;
+  margin-bottom: 30px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 30%;
+  min-width: 100px;
+  max-width: 350px;
+
+  padding-top: 25px;
+}
+
+.main__photo {
+  width: 90%;
+  max-width: 270px;
+  height: 170px;
+  object-fit: cover;
+}
+
+.footer {
+  height: 80px;
+  background-color: rgb(54, 53, 53);
+}
