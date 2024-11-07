@@ -115,6 +115,7 @@ html {
   width: 90%;
   height: auto;
   padding-top: 20px;
+  max-width: 270px;
 }
 
 .section__topic {
