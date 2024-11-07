@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,14 +24,32 @@ html {
 
 .input {
   margin-left: 10%;
-  height: 30%;
+  padding-left: 20px;
+  height: 30px;
 }
 
 .anchor {
   margin-right: 10%;
 }
+
+@media (max-width: 740px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .input {
+    width: 320px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .anchor {
+    margin-right: 0;
+  }
+}
 /* #endregion */
 
+/* #region main */
 .main {
   display: flex;
   flex-direction: column;
@@ -40,7 +62,7 @@ html {
 }
 
 .main__top {
-  width: 75%;
+  width: 80%;
   height: auto;
   min-height: 200px;
   margin-bottom: 20px;
@@ -48,8 +70,8 @@ html {
 
 .main__title {
   margin-top: 60px;
-  margin-bottom: 10px;
-  font-size: 52px;
+  margin-bottom: 30px;
+  font-size: 50px;
   font-weight: 400;
 }
 
@@ -64,7 +86,7 @@ html {
   display: flex;
   justify-content: space-between;
   height: 400px;
-  width: 75%;
+  width: 80%;
   margin-bottom: 30px;
 }
 
@@ -89,7 +111,97 @@ html {
   object-fit: cover;
 }
 
+.content__holder {
+  width: 90%;
+  height: auto;
+  padding-top: 20px;
+}
+
+.section__topic {
+  height: 40px;
+  color: rgb(204, 155, 18);
+  margin-bottom: 25px;
+}
+
+.section__describe {
+  font-style: italic;
+  font-weight: 200;
+}
+
+@media (max-width: 740px) {
+  .main {
+    height: 1300px;
+  }
+  .main__top {
+    width: 65%;
+  }
+  .main__title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 7px;
+  }
+  .text__under__title {
+    line-height: normal;
+  }
+  .sections__holder {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .section {
+    width: 85%;
+  }
+  .section__topic {
+    margin-bottom: 5px;
+  }
+}
+/* #endregion */
+
+/* #region footer */
 .footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   height: 80px;
   background-color: rgb(54, 53, 53);
 }
+
+.footer__logo {
+  height: 60px;
+  width: 40px;
+  filter: invert(1);
+}
+
+.btns__holder {
+  display: flex;
+  width: auto;
+  gap: 20px;
+}
+
+.footer__btns {
+  color: white;
+  text-decoration: none;
+}
+
+.footer_burger {
+  display: none;
+}
+
+@media (max-width: 740px) {
+  .footer__logo {
+    margin-left: 10%;
+  }
+  .footer__link {
+    margin-right: 10%;
+  }
+  .footer_burger {
+    display: block;
+  }
+  .btns__holder {
+    display: none;
+  }
+  .footer {
+    justify-content: space-between;
+  }
+}
+/* #endregion */
