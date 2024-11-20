@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laba 3</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body id="home">
+    <header class="header">
+      <div class="header__top">
+        <a class="anchor__header__logo">
+          <img
+            src="img/header__logo.png"
+            alt="header__logo"
+            class="header__logo"
+          />
+        </a>
+
+        <a class="anchor__header__menu" href="#menu">
+          <img
+            src="img/Icon-Burger-menu.png"
+            alt="Icon-Burger-menu"
+            class="menu__icon"
+          />
+        </a>
+      </div>
+
+      <div class="header__bottom">
+        <h1 class="header__title">
+          if everything seems under
+          <br />
+          control, you're just not going <br />
+          fast enough
+        </h1>
+      </div>
+    </header>
+
+    <div class="menu" id="menu">
+      <div class="menu__top">
+        <img src="img/header__logo.png" alt="header__logo" class="menu__logo" />
+        <a href="#home">
+          <img src="img/Icon-Close.png" alt="close" class="menu__close" />
+        </a>
+      </div>
+      <nav class="menu__nav">
+        <a href="#home" class="nav__link">Home</a>
+        <a href="#left__bar" class="nav__link">Gear Up for the Next Race!</a>
+        <a href="#nav" class="nav__link">Schedule season 2024</a>
+        <a href="#right__bar" class="nav__link">F1 circuit 2024</a>
+        <a href="#main__content" class="nav__link">Our Sponsors</a>
+      </nav>
+    </div>
+
+    <div class="overall">
+      <div class="left__bar" id="left__bar">
+        <h3 class="left__bar__title">Gear Up for the Next Race!</h3>
+        <div class="text__container">
+          <p class="left__bar__text" id="compute_area">
+            Click to compute number of grandstand seats:
+            <span class="area"></span>
+          </p>
+          <p class="left__bar__text" id="min_max">
+            Click and Enter 10 numbers to find the minimum and maximum value
+          </p>
+        </div>
+      </div>
+
+      <section class="nav" id="nav">
+        <h2 class="nav__title">Schedule season 2024</h2>
+        <div class="schedule">
+          <article class="car__category">
+            <a
+              class="category__link"
+              href="https://racingcalendar.net/championship/fia-formula-1-world-championship"
+            >
+              <img
+                src="img/f1_category.jpg"
+                alt="Formula 1"
+                class="category__photo"
+              />
+              <h3 class="category-photo__title">Formula 1</h3>
+            </a>
+          </article>
+
+          <article class="car__category">
+            <a
+              class="category__link"
+              href="https://racingcalendar.net/championship/nascar-cup-series"
+            >
+              <img src="img/nascar.jpg" alt="Nascar" class="category__photo" />
+              <h3 class="category-photo__title">Nascar</h3>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <main class="main__content" id="main__content">
+        <h3 class="sponsors__title">Our Sponsors</h3>
+        <div class="sponsors__logos">
+          <img src="img/qatar__airways.png" alt="qatar airways" class="logo" />
+          <img src="img/rolex.png" alt="rolex" class="logo" />
+          <img src="img/mcdonald.png" alt="mcdonalds" class="logo" />
+        </div>
+      </main>
+
+      <div class="right__bar" id="right__bar">
+        <h3 class="right__bar__title">F1 circuit 2024</h3>
+        <article class="f1__circuit">
+          <img
+            src="img/China_Circuit.png"
+            alt="F1 ROUTE 2024"
+            class="route__image"
+          />
+          <h4 class="route__name">Shanghai International Circuit</h4>
+          <ul class="route__params">
+            <li class="route__list__item">Circuit length: 5.451 km</li>
+            <li class="route__list__item">Number of laps: 56</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <footer class="footer"></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
