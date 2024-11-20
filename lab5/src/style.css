@@ -282,6 +282,7 @@ body {
 
 .right__bar__title,
 .route__name {
+  font-weight: normal;
   text-align: center;
   font-size: 24px;
   line-height: 130%;
@@ -316,7 +317,6 @@ body {
   flex-direction: column;
   gap: 5px;
   list-style: none;
-  font-weight: bold;
 }
 
 .route__list__item {
