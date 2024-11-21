@@ -168,24 +168,45 @@ rightBar.addEventListener('blur', updateBoldness);
 //#region task5
 const tableForm = document.querySelector('.tableForm');
 const clearTableButton = document.querySelector('.clearTableButton');
-
 const dynamicTable = document.querySelector('.dynamicTable');
 
-tableForm.addEventListener('submit', function (e) {
-  e.preventDefault();
+function saveTable() {
+  const rows = [];
+  const tableRows = dynamicTable.querySelectorAll('tr');
 
-  const inputValue = document.querySelector('#newRowValue').value;
+  for (let i = 0; i < tableRows.length; i++) {
+    const cell = tableRows[i].querySelector('td');
+    if (cell) {
+      rows.push(cell.textContent);
+    }
+  }
 
-  const newRow = dynamicTable.insertRow();
-  const newCell = newRow.insertCell(0);
-  newCell.textContent = inputValue;
+  localStorage.setItem('dynamicTableData', JSON.stringify(rows));
+}
 
-  document.querySelector('#newRowValue').value = '';
+function loadTable() {
+  const data = localStorage.getItem('dynamicTableData');
+  if (data) {
+    const rows = JSON.parse(data);
 
-  newCell.addEventListener('click', function (e) {
+    for (let i = 0; i < rows.length; i++) {
+      const newRow = dynamicTable.insertRow();
+      const newCell = newRow.insertCell(0);
+      newCell.textContent = rows[i];
+      addCellListener(newCell);
+    }
+  }
+}
+
+function addCellListener(cell) {
+  cell.addEventListener('click', function (e) {
     e.stopPropagation();
     const currentCell = this;
     const currentValue = currentCell.textContent;
+
+    if (currentCell.querySelector('input')) {
+      return;
+    }
 
     const editContainer = document.createElement('div');
 
@@ -216,14 +237,35 @@ tableForm.addEventListener('submit', function (e) {
       e.preventDefault();
       e.stopPropagation();
       currentCell.textContent = inputField.value;
-
+      saveTable();
       document.removeEventListener('click', handleClickOutside);
     });
 
     document.addEventListener('click', handleClickOutside);
   });
+}
+
+tableForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const inputValue = document.querySelector('#newRowValue').value.trim();
+  if (inputValue === '') return;
+
+  const newRow = dynamicTable.insertRow();
+  const newCell = newRow.insertCell(0);
+  newCell.textContent = inputValue;
+
+  addCellListener(newCell);
+
+  document.querySelector('#newRowValue').value = '';
+
+  saveTable();
 });
 
 clearTableButton.addEventListener('click', function () {
   dynamicTable.innerHTML = '';
+  localStorage.removeItem('dynamicTableData');
 });
+
+document.addEventListener('DOMContentLoaded', loadTable);
+//#endregion
