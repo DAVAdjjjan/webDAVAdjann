@@ -166,3 +166,64 @@ rightBar.addEventListener('blur', updateBoldness);
 //#endregion
 
 //#region task5
+const tableForm = document.querySelector('.tableForm');
+const clearTableButton = document.querySelector('.clearTableButton');
+
+const dynamicTable = document.querySelector('.dynamicTable');
+
+tableForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const inputValue = document.querySelector('#newRowValue').value;
+
+  const newRow = dynamicTable.insertRow();
+  const newCell = newRow.insertCell(0);
+  newCell.textContent = inputValue;
+
+  document.querySelector('#newRowValue').value = '';
+
+  newCell.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const currentCell = this;
+    const currentValue = currentCell.textContent;
+
+    const editContainer = document.createElement('div');
+
+    const inputField = document.createElement('input');
+    inputField.type = 'text';
+    inputField.value = currentValue;
+
+    const saveButton = document.createElement('button');
+    saveButton.type = 'button';
+    saveButton.textContent = 'Save';
+
+    currentCell.textContent = '';
+    editContainer.appendChild(inputField);
+    editContainer.appendChild(saveButton);
+
+    currentCell.appendChild(editContainer);
+
+    inputField.focus();
+
+    const handleClickOutside = function (e) {
+      if (!currentCell.contains(e.target)) {
+        currentCell.textContent = currentValue;
+        document.removeEventListener('click', handleClickOutside);
+      }
+    };
+
+    saveButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      currentCell.textContent = inputField.value;
+
+      document.removeEventListener('click', handleClickOutside);
+    });
+
+    document.addEventListener('click', handleClickOutside);
+  });
+});
+
+clearTableButton.addEventListener('click', function () {
+  dynamicTable.innerHTML = '';
+});

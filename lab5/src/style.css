@@ -173,6 +173,37 @@ body {
     height: auto;
   }
 }
+
+.table-container {
+  margin-top: 20px;
+  color: white;
+}
+
+.tableForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dynamicTable {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: #333;
+  color: white;
+}
+
+.dynamicTable td {
+  border: 1px solid white;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dynamicTable td:hover {
+  background-color: #555;
+}
+
 /* #endregion */
 
 /* #region nav */
