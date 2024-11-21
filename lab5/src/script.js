@@ -170,6 +170,7 @@ const tableForm = document.querySelector('.tableForm');
 const clearTableButton = document.querySelector('.clearTableButton');
 const dynamicTable = document.querySelector('.dynamicTable');
 
+//------------------------- table storage------------------//
 function saveTable() {
   const rows = [];
   const tableRows = dynamicTable.querySelectorAll('tr');
@@ -197,7 +198,9 @@ function loadTable() {
     }
   }
 }
+//------------------------- table storage------------------//
 
+//------------------------edit cell-------------------------//
 function addCellListener(cell) {
   cell.addEventListener('click', function (e) {
     e.stopPropagation();
@@ -244,7 +247,9 @@ function addCellListener(cell) {
     document.addEventListener('click', handleClickOutside);
   });
 }
+//------------------------edit cell-------------------------//
 
+//---------------------- add row--------------------------------//
 tableForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -261,6 +266,7 @@ tableForm.addEventListener('submit', function (e) {
 
   saveTable();
 });
+//---------------------- clear table--------------------------------//
 
 clearTableButton.addEventListener('click', function () {
   dynamicTable.innerHTML = '';
